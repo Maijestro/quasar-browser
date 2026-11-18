@@ -1,0 +1,64 @@
+name: Bug report
+description: A page does not work, the browser crashes or hangs
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing Quasar. Please check the known problems first:
+        https://quasar-browser.neocities.org/bugs.html
+  - type: input
+    id: package
+    attributes:
+      label: Quasar package
+      description: Date or name of the package you downloaded
+    validations:
+      required: true
+  - type: input
+    id: machine
+    attributes:
+      label: Computer
+      description: For example AmigaOne X5000/20, X1000, A1222, Sam460, Pegasos II G4
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: AmigaOS version, graphics card, memory
+      placeholder: AmigaOS 4.1 FE Update 3, Radeon RX 580, 2 GB
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page address
+      description: The address of the page where the problem shows (leave empty if it is not tied to a page)
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do?
+      description: Step by step, so that the problem can be repeated
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: often
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - Only once so far
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log files
+      description: Drag wk.log here (create an empty file wk.test in the Quasar drawer first, then repeat the problem). After a crash, add the AmigaOS crash log too. Do not attach passwords.txt.
